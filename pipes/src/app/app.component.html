@@ -1,0 +1,48 @@
+
+  <div class="container">
+    <br>
+    <h2>Payment Form</h2>
+    <br>
+    <br>
+    <div class="row">
+      <div class="form-group col">
+      <label>Receiver Name</label>
+      <input class="form-control" (input)=OnNameChange($any($event.target).value) />
+      </div>
+      <div class="col">
+      <label>Name</label>
+      <div>
+        {{name | titlecase}}
+      </div>
+     </div>  
+    </div>
+
+    <div class="row">
+      <div class="form-group col">
+      <label>Event Date</label>
+      <input type="date" class="form-control" (input)=OnDateChange($any($event.target).value) />
+      </div>
+      <div class="col">
+      <label>Date</label>
+      <div>
+        <b>{{date | date}}</b>
+      </div>
+     </div>  
+    </div>
+
+
+    <div class="row">
+      <div class="form-group col">
+      <label>Amount Paid</label>
+      <input class="form-control" (input)=OnAmountChange($any($event.target).value) />
+      </div>
+      <div class="col">
+      <label>Amount</label>
+      <div>
+        <b>{{amount |currency:'INR'}}</b>
+      </div>
+     </div>  
+    </div>
+
+  </div>
+  
